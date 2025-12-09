@@ -4,22 +4,16 @@
 #include <string>
 #include <stdexcept>
 
+using namespace std; 
+
 template <typename V> 
 class Dict {
     public:
-        // Inserta el par key->value. Lanza excepción si ya existe.
-        virtual void insert(std::string key, V value) = 0;
-
-        // Busca el valor asociado a key. Lanza excepción si no se encuentra.
-        virtual V search(std::string key) = 0;
-
-        // Elimina el par key->value. Lanza excepción si no se encuentra.
-        virtual V remove(std::string key) = 0;
-
-        // Devuelve el número de elementos en el diccionario.
+        virtual void insert(string key, V value) = 0;
+        virtual V search(string key) = 0;
+        virtual V remove(string key) = 0;
         virtual int entries() = 0;
-
-        // Destructor virtual: Importante en clases abstractas para evitar fugas de memoria
+        
         virtual ~Dict() {}
 };
 
