@@ -83,11 +83,11 @@ class BSTree {
 
             return max(n->right);
 
-        } else if(n->right == nullptr){
+        } else //if(n->right == nullptr){
 
             return n->elem;
 
-        }
+        
     }
 
     BSNode<T>* remove_max(BSNode<T>* n){
@@ -190,7 +190,7 @@ class BSTree {
     }
 
     ~BSTree(){
-        delete_cascada(root);
+        delete_cascade(root);
     }
 
 
