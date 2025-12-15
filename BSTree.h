@@ -114,7 +114,7 @@ class BSTree {
         }else if(e > n->elem){
             
             n->right = remove(n->right, e);
-        }
+        } else {
 
         if(n->left != nullptr && n->right != nullptr){
 
@@ -128,6 +128,7 @@ class BSTree {
             delete n;
             return result;
 
+        }
         }
         return n;
     }
@@ -197,5 +198,6 @@ class BSTree {
 
     
 };
+
 
 #endif
